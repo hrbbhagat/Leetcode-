@@ -5,7 +5,7 @@ class Solution {
 
         int high = 0;
         int low = 0;
-        int result = -1;
+        int result = 0;
 
         HashMap<Integer, Integer> hm = new HashMap<>();
 
