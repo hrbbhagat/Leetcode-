@@ -1,56 +1,34 @@
 class Solution {
     public int lengthOfLongestSubstring(String s) {
-         int maxLength = 0;
+        int low=0;
+        int high=0;
+        int n=s.length();
+        int result=0;
 
-        for (int i = 0; i < s.length(); i++) {
+        int k =high-low+1;
 
-            boolean visited[] = new boolean[256];
+        HashMap<Character ,Integer> hm=new HashMap<>();
 
-            for (int j = i; j < s.length(); j++) {
+        for(high=0;high<n;high++){
+            char ch =s.charAt(high);
+            hm.put(ch,hm.getOrDefault(ch,0)+1);
 
-                char ch = s.charAt(j);
+            while(hm.get(ch)>1){
+                char leftchar =s.charAt(low);
+                hm.put(leftchar, hm.get(leftchar)-1);
 
-                if (visited[ch] == true) {
-                    break;
+                if(hm.get(leftchar)==0){
+                    hm.remove(leftchar);
                 }
+                low++;
+                // k=high-low+1;
 
-                visited[ch] = true;
-
-                maxLength = Math.max(maxLength, j - i + 1);
             }
-        }
+            result =Math.max(result, high-low+1);
+        
 
-        return maxLength;
+        }
+        return result;
+        
     }
 }
-
-
-
-
-// class Solution {
-
-//     public int lengthOfLongestSubstring(String s) {
-
-//         int maxLength = 0;
-
-//         for (int i = 0; i < s.length(); i++) {
-
-//             boolean visited[] = new boolean[256];
-
-//             for (int j = i; j < s.length(); j++) {
-
-//                 char ch = s.charAt(j);
-
-//                 if (visited[ch] == true) {
-//                     break;
-//                 }
-
-//                 visited[ch] = true;
-
-//                 maxLength = Math.max(maxLength, j - i + 1);
-//             }
-//         }
-
-//         return maxLength;
-//     }
-// }
