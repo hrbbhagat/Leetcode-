@@ -5,7 +5,7 @@ class Solution {
         int n=s.length();
         int result=0;
 
-        int k =high-low+1;
+        // int k =high-low+1;
 
         HashMap<Character ,Integer> hm=new HashMap<>();
 
@@ -21,7 +21,7 @@ class Solution {
                     hm.remove(leftchar);
                 }
                 low++;
-                // k=high-low+1;
+                // int k=high-low+1;
 
             }
             result =Math.max(result, high-low+1);
