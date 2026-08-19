@@ -33,11 +33,11 @@ class Solution {
             k++;
         }
         int a=merge.length;
-        if (a%2!=0){
-            return merge[a/2];
+        if (a%2==0){
+            return (merge[a/2]+merge[a/2-1])/2.0;
         }
         else{
-            return (merge[a/2]+merge[a/2-1])/2.0;
+            return merge[a/2];
         }
     
 
