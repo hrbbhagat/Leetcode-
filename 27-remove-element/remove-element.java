@@ -8,7 +8,7 @@ class Solution {
 
             if(nums[j]==val){
                 j++;
-                //continue;
+                continue;
                 
                 
             }
