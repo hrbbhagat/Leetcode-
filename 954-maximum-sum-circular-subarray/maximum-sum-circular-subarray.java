@@ -42,10 +42,12 @@ class Solution {
         }
 
         int A =result;
-      
-        if(result<0){
+      //important part of the question -->
+        if(A<0){
             return result;
         }
+
+
         int B = totalsum-res;
         
         finalresult=Math.max(A,B);
