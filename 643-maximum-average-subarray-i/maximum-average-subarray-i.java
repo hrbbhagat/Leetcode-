@@ -13,18 +13,19 @@ class Solution {
 
         while(high<nums.length){
             
-            result=Math.max(average,result);
+            result=Math.max(sum,result);
             low++;
             high++;
+
             if(high==nums.length){
                 break;
             }
             sum=sum-nums[low-1];
             sum=sum+nums[high];
-            average=sum/k;
+            // average=sum/k;
 
             
         }
-        return result;
+        return result/k;
     }
 }
