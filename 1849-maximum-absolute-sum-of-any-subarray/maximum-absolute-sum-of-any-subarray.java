@@ -19,9 +19,9 @@ class Solution {
             res=Math.min(res, minending);
         }
 
-        int abs= Math.abs(result);
+        //int abs= Math.abs(result);
         int sbs=Math.abs(res);
-        int finalresult = Math.max(abs, sbs);
+        int finalresult = Math.max(sbs, result);
         return finalresult;
         
     }
