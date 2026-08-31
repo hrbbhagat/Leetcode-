@@ -4,7 +4,7 @@ class Solution {
         // int multiple=0;
         for(int i=0;i<nums.length;i++){
             if (nums[i]%k==0){
-                hm.put(nums[i],nums[i]);
+                hm.put(nums[i],1);
 
 
             }
