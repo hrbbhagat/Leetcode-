@@ -2,12 +2,13 @@ class Solution {
     public boolean validPalindrome(String s) {
         int i=0;
         int j=s.length()-1;
-        boolean ispalindrome=true;
+        //boolean ispalindrome=true;
 
         while(i<j){
 
             if(s.charAt(i)== s.charAt(j)){
-                ispalindrome=true;
+                i++;
+                j--;
         
                 
             }
@@ -30,19 +31,18 @@ class Solution {
                     left++;
                     right--;
                 }
-                if (left >= right)
+                if (left >= right){
                     return true;
+                }
 
-                ispalindrome = false;
-                return ispalindrome;
+                return false;
+                
     
             
             }
-            i++;
-            j--;
-           
+            
         }
-        return ispalindrome;
+        return true;
         
     }
      
