@@ -17,12 +17,12 @@ class Solution {
                 continue;
             }
 
-            if(hm.containsKey(diff)){ //hai 
+            if(hm.containsKey(diff)){ // hash maop pe hai  
                 int idx=hm.get(diff);
                 int len=i-idx;
                 result=Math.max(result,len);
             }
-            else{// nhi hai
+            else{// hash map pe nhi hai
                  hm.put(diff, i); 
               
 
