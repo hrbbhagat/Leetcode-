@@ -4,20 +4,30 @@ class Solution {
 
         List<int[]> result = new ArrayList<>();
 
-        int[] current = intervals[0];
-        result.add(current);
+        int start1 = intervals[0][0];
+        int end1   = intervals[0][1];
 
-        for (int i = 1; i < intervals.length; i++) {
+        for(int i=0; i<intervals.length;i++){
+            int start2=intervals[i][0];
+            int end2=intervals[i][1];
 
-            if (current[1] >= intervals[i][0]) {
-                current[1] = Math.max(current[1], intervals[i][1]);
-            } else {
-                current = intervals[i];
-                result.add(current);
+            if(end1>=start2){
+                end1=Math.max(end1,end2);
             }
+            else{
+                result.add(new int[]{start1,end1});
+                start1=start2;
+                end1=end2;
+
+            }
+
+            
         }
 
-        return result.toArray(new int[result.size()][]);
-        
+        result.add(new int[]{start1,end1});
+        return result.toArray(new int [result.size()][]);
+
+
+       
     }
 }
