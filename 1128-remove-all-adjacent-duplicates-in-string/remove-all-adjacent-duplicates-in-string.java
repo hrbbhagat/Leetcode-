@@ -15,8 +15,8 @@ class Solution {
             h.push(s.charAt(i));
         }
         while(!h.empty()){
-            result.append(h.pop());
-            
+            result.append(h.peek());
+            h.pop();
         }
         result.reverse();
         return result.toString();
