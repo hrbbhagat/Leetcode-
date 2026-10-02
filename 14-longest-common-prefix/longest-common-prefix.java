@@ -1,8 +1,6 @@
 class Solution {
     public String longestCommonPrefix(String[] strs) {
-        //int n =strs.length();
-        //HashMap<Character, Integer>hm=new HashMap<>();
-        String st="";
+        StringBuilder st=new StringBuilder();
 
         int minimum=Integer.MAX_VALUE;
         for(int i=0;i<strs.length;i++){
@@ -17,15 +15,17 @@ class Solution {
                 //st = st + strs[0].charAt(i);
               
                 if(strs[j].charAt(i)!= strs[0].charAt(i)){
-                    return st ;
+                    return st.toString();
                 }
 
             }
-            st = st + strs[0].charAt(i);
+            st.append(strs[0].charAt(i));
         }
 
-        return st;
+        return st.toString();
 
+        
+  
         
     }
 }
