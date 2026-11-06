@@ -15,7 +15,7 @@ class Solution {
         int min=Integer.MAX_VALUE;
         ArrayList<Character> keys=new ArrayList<>(hm.keySet());
         for(int i=0;i<keys.size();i++){
-            Character ch =keys.get(i);
+            char ch =keys.get(i);
             int required= hm.get(ch);
             int available=map.getOrDefault(ch,0);
 
