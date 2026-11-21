@@ -1,5 +1,5 @@
 class Solution {
-    public int minEatingSpeed(int[] piles, int totalHours ) {
+    public int minEatingSpeed(int[] piles, int h ) {
         int n=piles.length;
         int low=1;
        
@@ -16,7 +16,7 @@ class Solution {
             int mid=(low+high)/2;
             long requiredHours =fun(piles, mid, n);
             
-            if(requiredHours >totalHours ){//no
+            if(requiredHours >h ){//no
                low=mid+1;
 
             } 
